@@ -37,7 +37,9 @@ This install makes a few assumptions
 
 -   The server is a fresh install of the Ubuntu 22.04
 -   It's going to be dedicated to running Filemaker.
--   It's designed for and tested on an AWS EC2 instances. The default AWS user of ubuntu is used.
+-   It's designed for and tested on an AWS EC2 instances.
+    -   The default AWS user of ubuntu is used.
+    -   AWS network security settings have ports 22, 80, 443 & 5003 open
 -   It uses a SSL certificate from Let's Encrypt
 -   It uses 4 seperate drives.
 
@@ -50,3 +52,20 @@ The following filemaker default file locations are changed so that the data is s
 `/opt/FileMaker/FileMaker Server/Data/Databases             --> /opt/FileMaker/Data/Databases`
 `/opt/FileMaker/FileMaker Server/Data/Databases/RC_Data_FMS --> /opt/FileMaker/Data/Containers`
 `/opt/FileMaker/FileMaker Server/Data/Backups               --> /opt/FileMaker/Backups`
+
+## Installing these scripts
+
+After the AWS instance has been created, from the home directory of the default user ubuntu
+
+```bash
+git clone https://github.com/hammondus/filemaker-server.git
+$ cd filemaker-server
+```
+
+edit install.sh
+The various settings required to run the installation are commented out in install.sh
+Uncomment these out and put in the settings to suit. Then:
+
+```bash
+$ sudo ./install.sh
+```
