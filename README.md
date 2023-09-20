@@ -62,10 +62,13 @@ git clone https://github.com/hammondus/filemaker-server.git
 $ cd filemaker-server
 ```
 
-edit install.sh
+edit fm_install.sh
 The various settings required to run the installation are commented out in install.sh
 Uncomment these out and put in the settings to suit. Then:
 
 ```bash
-$ sudo ./install.sh
+$ ./fm_install.sh
 ```
+
+The script copies itself to /home/ubuntu/. As it has to be run a few times due to reboots, it
+can just be run from ~./fm_install.sh
