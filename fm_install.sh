@@ -11,7 +11,7 @@
 
 # Required
 # ALL The following variables are required to be uncommented and set correctly for the script to work
-DOWNLOAD=https://downloads.claris.com/esd/fms_20.1.2.207_Ubuntu22_amd64.zip
+DOWNLOAD=https://downloads.claris.com/fmserver.zip
 CERTBOT_HOSTNAME_SETUP=fm.testes.works
 #CERTBOT_HOSTNAME_PROD=fm.hammond.zone
 CERTBOT_EMAIL=craig@blueskyflying.com.au
